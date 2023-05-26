@@ -26,8 +26,16 @@ export class ProductService {
     }
 
     async creatProduct (payload : CreateProductRequestDto) : Promise<CreateProductResponse>{
+        const isProduct : Product = await this.productRepository.findOne({where : {name : payload.name}})
+        if(isProduct){
+            return {id : null , error: ["Product already exist"], status : HttpStatus.CONFLICT}
+        }
+        const isSku : Product = await this.productRepository.findOne({where : {sku : payload.sku}})
+        if(isSku){
+            return {id : null , error : ["Sku already exist "], status : HttpStatus.CONFLICT}
+        }
         const product : Product = new Product();
-
+        
         product.name  = payload.name;
         product.sku = payload.sku;
         product.stock = payload.stock;
