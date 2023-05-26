@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "../nestjs-auth-microservice"
+		},
+		{
+			"path": "../grpc-nest-gateway"
+		}
+	],
+	"settings": {}
+}

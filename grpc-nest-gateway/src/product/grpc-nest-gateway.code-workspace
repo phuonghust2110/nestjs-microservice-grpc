@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../nestjs-auth-microservice"
+		},
+		{
+			"path": "../../../nestjs-product-microservice"
+		},
+		{
+			"path": "../../../nestjs-order-microservice"
+		}
+	],
+	"settings": {}
+}
